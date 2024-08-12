@@ -14,7 +14,7 @@ const App = () => {
     const colorLetter = useSelector(state => state.rootReducer.changeColor.defaultText)
     const isCorrect = useSelector(state => state.rootReducer.inputLetter.isCorrect)
 
-    const [seconds, setSeconds] = useState(3)
+    const [seconds, setSeconds] = useState(30)
     const [startTimer, setStartTimer] = useState(false)
     const [countPress, setCountPress] = useState(0)
     const [wpm, setWpm] = useState()
