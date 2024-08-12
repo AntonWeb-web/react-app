@@ -1,0 +1,103 @@
+body {
+  background-color: #323437;
+  font-family: 'Courier New', monospace;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.typingArea {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  justify-items: left;
+  padding: 0 20px;
+}
+
+.void {
+  width: 200px;
+}
+
+.wordsContainer {
+  grid-column: 2 / 3;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.word {
+  user-select: none;
+  color: #646669;
+  font-size: 2em;
+  margin: .25em;
+}
+
+.wordUnderline {
+  user-select: none;
+  color: #646669;
+  font-size: 2em;
+  margin: .25em;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.wordUnderline::after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 36px;
+  background: #bb9a1c;
+  border-radius: 4px;
+  animation: blink 1s infinite;
+}
+
+.wordUnderline.yellow::after {
+  background: #bb9a1c;
+}
+
+.wordUnderline.red::after {
+  background: #ca4754;
+}
+
+@keyframes blink {
+  0%, 100% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 0;
+  }
+}
+
+.divTime {
+  align-items: left;
+  font-size: 2em;
+  font-weight: bold;
+  color: #bb9a1c;
+  margin-left: 6px;
+}
+
+.resetContainer {
+  color: #bb9a1c;
+  font-weight: bold;
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonReset {
+  background-color: #bb9a1c;
+  margin: 20px;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.buttonReset:hover {
+  background-color: #967c14;
+}
